@@ -1,6 +1,6 @@
 version: 2
 models:
-  - name: sales
+  - name: stg_raw__raw_sales
     columns:
       - name: pk
         tests:
