@@ -1,0 +1,61 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: gz_raw_data
+    description: "Greenweez raw data source."
+    tables:
+      - name: raw_product
+        identifier: raw_gz_product
+        description: "List of Greenweez products / one row per product identifier and purchase cost."
+        columns:
+          - name: products_id
+            description: "Product identifier."
+            data_type: INTEGER
+            tests:
+              - unique
+              - not_null
+          - name: purchase_price
+            description: "Unitary cost for a given product identifier."
+            data_type: STRING
+
+      - name: raw_sales
+        identifier: raw_gz_sales
+        description: "Sales of Greenweez / we have one row per products_id found in each orders_id."
+        columns:
+          - name: date_date
+            description: "The date of purchase."
+            data_type: DATE
+          - name: orders_id
+            description: "Identifier for each order."
+            data_type: INTEGER
+          - name: products_id
+            description: "Identifier for each product, which links to products_id in the products table."
+            data_type: INTEGER
+          - name: revenue
+            description: "Total revenue generated from the sale of the product."
+            data_type: FLOAT
+          - name: quantity
+            description: "Number of units of the product sold in the order."
+            data_type: INTEGER
+
+
+      - name: raw_ship
+        identifier: raw_gz_ship
+        description: "Shipping details for each order, including fees and costs."
+        columns:
+          - name: orders_id
+            description: "Identifier for each order, linking to orders_id in the sales table."
+            data_type: INTEGER
+            tests:
+              - unique
+              - not_null
+          - name: shipping_fee
+            description: "Fee charged for shipping."
+            data_type: FLOAT
+          - name: log_cost
+            description: "Logistics cost associated with the shipping."
+            data_type: FLOAT
+          - name: ship_cost
+            description: "Total shipping cost calculated or estimated."
+            data_type: STRING
