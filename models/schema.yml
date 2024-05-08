@@ -59,3 +59,108 @@ sources:
           - name: ship_cost
             description: "Total shipping cost calculated or estimated."
             data_type: STRING
+
+      - name: raw_adwords
+        identifier: raw_gz_adwords
+        description: "Advertising data from Google AdWords, including costs and campaign metrics."
+        columns:
+          - name: date_date
+            description: "The date of the advertising data."
+            data_type: DATE
+          - name: paid_source
+            description: "The source of the ad spend."
+            data_type: STRING
+          - name: campaign_key
+            description: "Unique key for the campaign."
+            data_type: STRING
+          - name: camPGN_name
+            description: "Name of the campaign."
+            data_type: STRING
+          - name: ads_cost
+            description: "Total cost of the ads."
+            data_type: STRING
+          - name: impression
+            description: "Number of impressions."
+            data_type: FLOAT
+          - name: click
+            description: "Number of clicks."
+            data_type: FLOAT
+
+      - name: raw_bing
+        identifier: raw_gz_bing
+        description: "Advertising data from Bing, including costs and campaign metrics."
+        columns:
+          - name: date_date
+            description: "The date of the advertising data."
+            data_type: DATE
+          - name: paid_source
+            description: "The source of the ad spend."
+            data_type: STRING
+          - name: campaign_key
+            description: "Unique key for the campaign."
+            data_type: STRING
+          - name: camPGN_name
+            description: "Name of the campaign."
+            data_type: STRING
+          - name: ads_cost
+            description: "Total cost of the ads."
+            data_type: STRING
+          - name: impression
+            description: "Number of impressions."
+            data_type: FLOAT
+          - name: click
+            description: "Number of clicks."
+            data_type: FLOAT
+
+      - name: raw_criteo
+        identifier: raw_gz_criteo
+        description: "Advertising data from Criteo, including costs and campaign metrics."
+        columns:
+          - name: date_date
+            description: "The date of the advertising data."
+            data_type: DATE
+          - name: paid_source
+            description: "The source of the ad spend."
+            data_type: STRING
+          - name: campaign_key
+            description: "Unique key for the campaign."
+            data_type: STRING
+          - name: camPGN_name
+            description: "Name of the campaign."
+            data_type: STRING
+          - name: ads_cost
+            description: "Total cost of the ads."
+            data_type: STRING
+          - name: impression
+            description: "Number of impressions."
+            data_type: FLOAT
+          - name: click
+            description: "Number of clicks."
+            data_type: FLOAT
+
+      - name: raw_facebook
+        identifier: raw_gz_facebook
+        description: "Advertising data from Facebook, including costs and campaign metrics."
+        columns:
+          - name: date_date
+            description: "The date of the advertising data."
+            data_type: DATE
+          - name: paid_source
+            description: "The source of the ad spend."
+            data_type: STRING
+          - name: campaign_key
+            description: "Unique key for the campaign."
+            data_type: STRING
+          - name: camPGN_name
+            description: "Name of the campaign."
+            data_type: STRING
+          - name: ads_cost
+            description: "Total cost of the ads."
+            data_type: STRING
+          - name: impression
+            description: "Number of impressions."
+            data_type: FLOAT
+          - name: click
+            description: "Number of clicks."
+            data_type: FLOAT
+
